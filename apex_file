@@ -1,0 +1,26 @@
+// Function to perform linear search
+    public static Integer linearSearch(Integer[] arr, Integer target) {
+        // Loop through each element of the array
+        for(Integer i = 0; i < arr.size(); i++) {
+            // If the current element matches the target, return its index
+            if(arr[i] == target) {
+                return i;
+            }
+        }
+        // If target is not found, return -1
+        return -1;
+    }
+    
+    // Example usage
+    public static void main(String[] args) {
+        Integer[] arr = new Integer[]{10, 20, 30, 40, 50};
+        Integer target = 30;
+        
+        Integer result = linearSearch(arr, target);
+        
+        if(result != -1) {
+            System.debug('Element found at index: ' + result);
+        } else {
+            System.debug('Element not found');
+        }
+    }
